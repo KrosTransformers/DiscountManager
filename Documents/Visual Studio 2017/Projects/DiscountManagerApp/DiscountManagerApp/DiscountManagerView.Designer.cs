@@ -33,9 +33,10 @@
             this.lblYears = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.lblCalculatedValue = new System.Windows.Forms.Label();
-            this.numAmount = new System.Windows.Forms.NumericUpDown();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.numYears = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numAmount)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numYears)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,12 +89,13 @@
             this.lblCalculatedValue.TabIndex = 7;
             this.lblCalculatedValue.Text = "Calculated value";
             // 
-            // numAmount
+            // numPrice
             // 
-            this.numAmount.Location = new System.Drawing.Point(74, 22);
-            this.numAmount.Name = "numAmount";
-            this.numAmount.Size = new System.Drawing.Size(100, 20);
-            this.numAmount.TabIndex = 8;
+            this.numPrice.Location = new System.Drawing.Point(74, 22);
+            this.numPrice.Name = "numPrice";
+            this.numPrice.Size = new System.Drawing.Size(100, 20);
+            this.numPrice.TabIndex = 8;
+            this.numPrice.ValueChanged += new System.EventHandler(this.numPrice_ValueChanged);
             // 
             // numYears
             // 
@@ -102,13 +104,24 @@
             this.numYears.Size = new System.Drawing.Size(100, 20);
             this.numYears.TabIndex = 9;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(241, 105);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DiscountManagerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(373, 165);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.numYears);
-            this.Controls.Add(this.numAmount);
+            this.Controls.Add(this.numPrice);
             this.Controls.Add(this.lblCalculatedValue);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.lblYears);
@@ -116,7 +129,7 @@
             this.Controls.Add(this.lblAmount);
             this.Name = "DiscountManagerView";
             this.Text = "Discount manager";
-            ((System.ComponentModel.ISupportInitialize)(this.numAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numYears)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,8 +143,9 @@
         private System.Windows.Forms.Label lblYears;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label lblCalculatedValue;
-        private System.Windows.Forms.NumericUpDown numAmount;
+        private System.Windows.Forms.NumericUpDown numPrice;
         private System.Windows.Forms.NumericUpDown numYears;
+        private System.Windows.Forms.Button button1;
     }
 }
 

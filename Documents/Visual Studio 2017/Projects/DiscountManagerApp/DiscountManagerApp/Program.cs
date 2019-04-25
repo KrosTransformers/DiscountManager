@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiscountManagerApp
@@ -16,7 +13,10 @@ namespace DiscountManagerApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DiscountManagerView(new DiscountManagerViewModel()));
+            var discountService = new DiscountManagerService();
+            var discountRepository = new DiscountRepository();
+            var discountViewModel = new DiscountManagerViewModel(discountService, discountRepository);
+            Application.Run(new DiscountManagerView(discountViewModel));
         }
     }
 }

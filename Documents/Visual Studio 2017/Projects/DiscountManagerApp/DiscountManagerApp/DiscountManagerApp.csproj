@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DicountManagerService.cs" />
     <Compile Include="DiscountManagerDto.cs" />
     <Compile Include="DiscountManagerView.cs">
       <SubType>Form</SubType>
@@ -55,6 +55,10 @@
       <DependentUpon>DiscountManagerView.cs</DependentUpon>
     </Compile>
     <Compile Include="DiscountManagerViewModel.cs" />
+    <Compile Include="DiscountRepository.cs" />
+    <Compile Include="IDiscountManagerService.cs" />
+    <Compile Include="IDiscountManagerViewModel.cs" />
+    <Compile Include="IDiscountRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DiscountManagerView.resx">
